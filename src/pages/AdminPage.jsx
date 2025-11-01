@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import CreateProductForm from '../components/CreateProductForm'
 import { motion } from "framer-motion";
-import { PlusCircle, ShoppingBasket } from "lucide-react";
+import { MessageCircle, PlusCircle, ShoppingBasket } from "lucide-react";
 import ProoductList from '../components/ProoductList';
 import { useNavigate } from 'react-router-dom';
+import MessageList from '@/components/MessageList';
 
 
 
 const tabs = [
   { id: "create", label: "Create Product", icon: PlusCircle },
   { id: "product", label: "Products", icon: ShoppingBasket },
-  { id: "analytics", label: "Analytics", icon: PlusCircle },
+  { id: "message", label: "Messages", icon: MessageCircle },
 ];
 
 const AdminPage = () => {
@@ -62,7 +63,7 @@ const AdminPage = () => {
         </div>
         {activeTab === "create" && <CreateProductForm />}
         {activeTab === "product" && <ProoductList />}
-        {/* {activeTab === "analytics" && <AnalyticsTab />} */}
+        {activeTab === "message" && <MessageList />}
       </div>
     </div>
     </>

@@ -1,6 +1,7 @@
 import { Clock, Globe, MailCheck, MapPin } from "lucide-react";
 import React, { useState } from "react";
 import { addMessages } from "../Appwrite/messagesController";
+import MessageList from "@/components/MessageList";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -79,6 +80,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <MessageList/>
     </div>
   );
 };

@@ -52,7 +52,7 @@ const handleSubmit = async (e) => {
   };
   return (
     <motion.div
-      className="bg-gray-800 shadow-lg rounded-lg mb-8 p-8 w-[650px] mx-auto"
+      className="bg-gray-800 shadow-lg rounded-lg mb-8 p-8 w-[650px] mx-auto max-md:w-[450px]"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
